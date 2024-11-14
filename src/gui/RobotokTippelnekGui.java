@@ -4,6 +4,8 @@
  */
 package gui;
 
+import javax.swing.JOptionPane;
+
 /**
  *
  * @author csolti
@@ -423,8 +425,11 @@ public class RobotokTippelnekGui extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void mnuKilepesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mnuKilepesActionPerformed
-        //System.out.println(WIDTH);
-        System.exit(0);
+        int valasz = JOptionPane.showConfirmDialog(rootPane, "Biztos kilép?");
+        System.out.println("valasz = " + valasz);
+        if (valasz == 0) {
+            System.exit(0);
+        }
     }//GEN-LAST:event_mnuKilepesActionPerformed
 
     private void btnGeneralActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnGeneralActionPerformed
