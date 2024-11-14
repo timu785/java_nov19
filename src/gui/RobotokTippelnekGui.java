@@ -75,8 +75,13 @@ public class RobotokTippelnekGui extends javax.swing.JFrame {
         jRadioButtonMenuItem2 = new javax.swing.JRadioButtonMenuItem();
         jMenuItem7 = new javax.swing.JMenuItem();
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setDefaultCloseOperation(javax.swing.WindowConstants.DO_NOTHING_ON_CLOSE);
         setTitle("Tippelő robotok");
+        addWindowListener(new java.awt.event.WindowAdapter() {
+            public void windowClosing(java.awt.event.WindowEvent evt) {
+                formWindowClosing(evt);
+            }
+        });
 
         jPanel3.setBorder(javax.swing.BorderFactory.createTitledBorder("KIS robotok"));
 
@@ -425,15 +430,7 @@ public class RobotokTippelnekGui extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void mnuKilepesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mnuKilepesActionPerformed
-        String cim = "KILÉPÉS";
-        String uzenet = "Biztos kilép?";
-        int gombok = JOptionPane.OK_CANCEL_OPTION;
-        int valasz = JOptionPane.showConfirmDialog(rootPane, uzenet, cim, gombok);
-        //System.out.println("választott gomb: " + valasz);
-        if (valasz == JOptionPane.OK_OPTION) {
-            final int HIBA_KOD = 0;
-            System.exit(HIBA_KOD);
-        }
+        kilepes();
     }//GEN-LAST:event_mnuKilepesActionPerformed
 
     private void btnGeneralActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnGeneralActionPerformed
@@ -447,6 +444,21 @@ public class RobotokTippelnekGui extends javax.swing.JFrame {
         txtVelSzam2.setText(szam1 + "");
     }//GEN-LAST:event_btnGeneralActionPerformed
 
+    private void formWindowClosing(java.awt.event.WindowEvent evt) {//GEN-FIRST:event_formWindowClosing
+        kilepes();
+    }//GEN-LAST:event_formWindowClosing
+
+    private void kilepes(){
+        String cim = "KILÉPÉS";
+        String uzenet = "Biztos kilép?";
+        int gombok = JOptionPane.OK_CANCEL_OPTION;
+        int valasz = JOptionPane.showConfirmDialog(rootPane, uzenet, cim, gombok);
+        //System.out.println("választott gomb: " + valasz);
+        if (valasz == JOptionPane.OK_OPTION) {
+            final int HIBA_KOD = 0;
+            System.exit(HIBA_KOD);
+        }
+    }
     /**
      * @param args the command line arguments
      */
