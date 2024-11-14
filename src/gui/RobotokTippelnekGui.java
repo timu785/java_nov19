@@ -212,7 +212,7 @@ public class RobotokTippelnekGui extends javax.swing.JFrame {
             }
         });
 
-        numMin.setModel(new javax.swing.SpinnerNumberModel(Byte.valueOf((byte)1), Byte.valueOf((byte)1), Byte.valueOf((byte)10), Byte.valueOf((byte)1)));
+        numMin.setModel(new javax.swing.SpinnerNumberModel(1, 1, 10, 1));
 
         numMax.setModel(new javax.swing.SpinnerNumberModel(10, 1, 10, 1));
 
@@ -433,7 +433,9 @@ public class RobotokTippelnekGui extends javax.swing.JFrame {
         int szam1;
         int db = felso - also + 1;
         szam1 = (int)(Math.random() * db) + also;
-        System.out.println(szam1);
+        
+        txtVelSzam1.setText(szam1 + "");
+        txtVelSzam2.setText(szam1 + "");
     }//GEN-LAST:event_btnGeneralActionPerformed
 
     /**
