@@ -5,7 +5,6 @@ import java.util.Random;
 public class RobotokTippelnek {
 
     public static void main(String[] args) {
-        System.exit(0);
         System.out.println("Három robot tippel egyet-egyet:");
         /* tippelések beállítása: */
         int szam1;
