@@ -425,10 +425,14 @@ public class RobotokTippelnekGui extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void mnuKilepesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mnuKilepesActionPerformed
-        int valasz = JOptionPane.showConfirmDialog(rootPane, "Biztos kilép?");
-        System.out.println("valasz = " + valasz);
-        if (valasz == 0) {
-            System.exit(0);
+        String cim = "KILÉPÉS";
+        String uzenet = "Biztos kilép?";
+        int gombok = JOptionPane.OK_CANCEL_OPTION;
+        int valasz = JOptionPane.showConfirmDialog(rootPane, uzenet, cim, gombok);
+        //System.out.println("választott gomb: " + valasz);
+        if (valasz == JOptionPane.OK_OPTION) {
+            final int HIBA_KOD = 0;
+            System.exit(HIBA_KOD);
         }
     }//GEN-LAST:event_mnuKilepesActionPerformed
 
