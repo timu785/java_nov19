@@ -1,0 +1,27 @@
+A kitalálandó szám: 10
+1. robot tippje: 10
+2. robot tippje: 4
+3. robot tippje: 2
+Az 1. robot eltalálta!
+
+A kitalálandó szám: 10
+1. robot tippje: 3
+2. robot tippje: 10
+3. robot tippje: 10
+A 2. robot eltalálta!
+A 3. robot eltalálta!
+
+
+
+
+A kitalálandó szám: 1
+Az 1. tipp: 2
+A 2. tipp: 7
+A 3. tipp: 7
+Nem siekrült háromból eltalálni!
+
+A kitalálandó szám: 1
+Az 1. tipp: 3
+A 2. tipp: 6
+A 3. tipp: 3
+Nem siekrült háromból eltalálni!

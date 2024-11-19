@@ -62,7 +62,7 @@ public class RobotokTippelnekGui extends javax.swing.JFrame {
         jMenuBar1 = new javax.swing.JMenuBar();
         jMenu1 = new javax.swing.JMenu();
         jMenuItem3 = new javax.swing.JMenuItem();
-        jMenuItem2 = new javax.swing.JMenuItem();
+        mnuAlapallapot = new javax.swing.JMenuItem();
         jSeparator1 = new javax.swing.JPopupMenu.Separator();
         mnuKilepes = new javax.swing.JMenuItem();
         jMenu2 = new javax.swing.JMenu();
@@ -83,9 +83,9 @@ public class RobotokTippelnekGui extends javax.swing.JFrame {
             }
         });
 
-        jPanel3.setBorder(javax.swing.BorderFactory.createTitledBorder("KIS robotok"));
+        jPanel3.setBorder(javax.swing.BorderFactory.createTitledBorder(null));
 
-        jPanel2.setBorder(javax.swing.BorderFactory.createTitledBorder("HÁROM robot"));
+        jPanel2.setBorder(javax.swing.BorderFactory.createTitledBorder(null));
 
         jScrollPane1.setHorizontalScrollBarPolicy(javax.swing.ScrollPaneConstants.HORIZONTAL_SCROLLBAR_NEVER);
 
@@ -121,7 +121,7 @@ public class RobotokTippelnekGui extends javax.swing.JFrame {
         jRadioButton3.setSelected(true);
         jRadioButton3.setText("Mindent mutat");
 
-        jPanel4.setBorder(javax.swing.BorderFactory.createTitledBorder("EGY robot"));
+        jPanel4.setBorder(javax.swing.BorderFactory.createTitledBorder(null));
 
         jTextArea2.setColumns(20);
         jTextArea2.setRows(5);
@@ -191,7 +191,7 @@ public class RobotokTippelnekGui extends javax.swing.JFrame {
                 .addContainerGap())
         );
 
-        jPanel1.setBorder(javax.swing.BorderFactory.createTitledBorder("NAGY robot"));
+        jPanel1.setBorder(javax.swing.BorderFactory.createTitledBorder(null));
 
         jLabel1.setText("A három kis robot számára kitalálandó szám:");
 
@@ -206,7 +206,7 @@ public class RobotokTippelnekGui extends javax.swing.JFrame {
         txtVelSzam2.setEditable(false);
         txtVelSzam2.setText("1");
 
-        jPanel5.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        jPanel5.setBorder(javax.swing.BorderFactory.createLineBorder(null));
 
         jLabel3.setText("Minimum érték:");
 
@@ -360,8 +360,13 @@ public class RobotokTippelnekGui extends javax.swing.JFrame {
         jMenuItem3.setText("online help");
         jMenu1.add(jMenuItem3);
 
-        jMenuItem2.setText("Alapállapot");
-        jMenu1.add(jMenuItem2);
+        mnuAlapallapot.setText("Alapállapot");
+        mnuAlapallapot.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                mnuAlapallapotActionPerformed(evt);
+            }
+        });
+        jMenu1.add(mnuAlapallapot);
         jMenu1.add(jSeparator1);
 
         mnuKilepes.setText("Kilépés");
@@ -448,6 +453,12 @@ public class RobotokTippelnekGui extends javax.swing.JFrame {
         kilepes();
     }//GEN-LAST:event_formWindowClosing
 
+    private void mnuAlapallapotActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mnuAlapallapotActionPerformed
+        numMin.setValue((int)1);
+        numMax.setValue((int)10);
+        
+    }//GEN-LAST:event_mnuAlapallapotActionPerformed
+
     private void kilepes(){
         String cim = "KILÉPÉS";
         String uzenet = "Biztos kilép?";
@@ -511,7 +522,6 @@ public class RobotokTippelnekGui extends javax.swing.JFrame {
     private javax.swing.JMenu jMenu2;
     private javax.swing.JMenu jMenu3;
     private javax.swing.JMenuBar jMenuBar1;
-    private javax.swing.JMenuItem jMenuItem2;
     private javax.swing.JMenuItem jMenuItem3;
     private javax.swing.JMenuItem jMenuItem4;
     private javax.swing.JMenuItem jMenuItem5;
@@ -537,6 +547,7 @@ public class RobotokTippelnekGui extends javax.swing.JFrame {
     private javax.swing.JTextArea jTextArea1;
     private javax.swing.JTextArea jTextArea2;
     private javax.swing.JTextPane jTextPane1;
+    private javax.swing.JMenuItem mnuAlapallapot;
     private javax.swing.JMenuItem mnuKilepes;
     private javax.swing.JSpinner numMax;
     private javax.swing.JSpinner numMin;
